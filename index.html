@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VidSrc - Next generation Video Streaming API</title>
+    <base href="https://vidsrc.cc/">
+    <meta name="description" content="2embed, vidsrc, video embed api">
+    <meta name="keywords" content="2embed, vidsrc, video embed api">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.0.0/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/all.css">
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <header class="d-flex align-items-center">
+        <div class="container">
+          <div class="wrapper d-flex align-items-center justify-content-between">
+            <a href="#" class="logo">
+              <img src="assets/images/logo.png">
+            </a>
+            <ul class="d-none smooth-scroll d-sm-flex">
+              <li>
+                <a href="#features">Features</a>
+              </li>
+              <li>
+                <a href="#faqs">FAQs</a>
+              </li>
+              <li class="d-none d-md-block">
+                <a href="#" data-toggle="modal" data-target="#contact">Contact</a>
+              </li>
+            </ul>
+            <a class="btn rounded-pill shadow-md btn-primary" href="#demo-player">Start Now</a>
+          </div>
+        </div>
+      </header>
+      <main class="">
+        <div class="container">
+          <section class="hero text-center d-flex align-items-center flex-column">
+            <h1 class="major-color">
+              <span>Next generation</span>
+              <br>
+              <span class=" gardient-primary">Video Streaming API</span>
+            </h1>
+            <p class="mt-3 sub-text">We offer free streaming links for movies and episodes that can be <br>effortlessly integrated into your website through our embed links, API </p>
+          </section>
+        </div>
+        <section id="demo-player">
+          <div class="container">
+            <div class="wrapper">
+              <ul class="nav my-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="Movie-tab" data-toggle="tab" data-target="#Movie" type="button" role="tab" aria-controls="Movie" aria-selected="true">Movie Player</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="Series-tab" data-toggle="tab" data-target="#Series" type="button" role="tab" aria-controls="Series" aria-selected="false">Series Player</button>
+                </li>
+              </ul>
+              <div class="tab-content mt-3">
+                <div class="tab-pane active" id="Movie" role="tabpanel" aria-labelledby="Movie-tab">
+                  <form class="d-flex movie justify-content-center demo">
+                    <input type="hidden" name="type" value="movie">
+                    <div class="form-group">
+                      <input type="text" class="form-control text-center form-control-lg" placeholder="IMDb or TMDB" name="id" data-default="385687">
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane " id="Series" role="tabpanel" aria-labelledby="Series-tab">
+                  <form class="d-flex series justify-content-center demo">
+                    <input type="hidden" name="type" value="tv">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control text-center form-control-lg" placeholder="IMDb or TMDB" name="id" data-default="tt0944947">
+                      <input type="number" min="0" class="form-control text-center form-control-lg" placeholder="SS number" name="season">
+                      <input type="number" min="0" class="form-control text-center form-control-lg" placeholder="EP number" name="episode">
+                    </div>
+                  </form>
+                </div>
+                <input type="text" class="form-control text-center" id="link-demo" autocomplete="off" readonly>
+                <div class="player-main mt-3">
+                  <div id="player"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-padding" id="features">
+          <div class="container">
+            <h2 class="section-title">
+              <span class="major-color">Deliver an optimized</span>
+              <span class="gardient-primary">User Experience</span>
+            </h2>
+            <p class="sub-text my-3">There are plenty of essential features optimized to provide the best user experience.</p>
+            <div class="row mt-5">
+              <div class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height">
+                <div class="rounded p-3">
+                  <lord-icon class="feature-ico" src="https://cdn.lordicon.com/xhsumrcb.json" target="div" trigger="loop-on-hover" colors="primary:#0e3d3f,secondary:#f8c55c"></lord-icon>
+                  <h5 class="mt-auto">Auto Update</h5>
+                  <div class="text-muted">Links are automatically updated with new or better quality as soon as they are available online.</div>
+                </div>
+              </div>
+              <div class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height">
+                <div class="rounded p-3">
+                  <lord-icon class="feature-ico" src="https://cdn.lordicon.com/ivhjpjsw.json" target="div" trigger="loop-on-hover" colors="primary:#0e3d3f,secondary:#f8c55c"></lord-icon>
+                  <h5 class="mt-auto">Responsive</h5>
+                  <div class="text-muted">The player is responsive and can work on every Desktop, Mobile, Tablet without problem.</div>
+                </div>
+              </div>
+              <div class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height">
+                <div class="rounded p-3">
+                  <lord-icon class="feature-ico" src="https://cdn.lordicon.com/ydqfeguo.json" target="div" trigger="loop-on-hover" colors="primary:#0e3d3f,secondary:#f8c55c"></lord-icon>
+                  <h5 class="mt-auto">High Quality</h5>
+                  <div class="text-muted">The quality of the links is the latest available, mostly are 1080p.</div>
+                </div>
+              </div>
+              <div class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height">
+                <div class="rounded p-3">
+                  <lord-icon class="feature-ico" src="https://cdn.lordicon.com/qtiwxsuo.json" target="div" trigger="loop-on-hover" colors="primary:#0e3d3f,secondary:#f8c55c"></lord-icon>
+                  <h5 class="mt-auto">Fast Streaming Servers</h5>
+                  <div class="text-muted">The player includes a list of fastest streaming servers, users can easily optional.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-padding" id="faqs">
+          <div class="container">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <div class="sub-text">
+              <a href="#" data-toggle="modal" data-target="#contact">Contact us</a> if you have any more questions.
+            </div>
+            <div class="ex-box mansonry mt-5">
+              <div class="rounded p-3">
+                <h5 class="mt-auto">Are your links protected from DMCA?</h5>
+                <div class="text-muted mt-2">Our links are secure and protected, ensuring that they are not subject to removal due to DMCA notices.</div>
+              </div>
+              <div class="rounded p-3">
+                <h5 class="mt-auto">Are subtitles available for all movies and TV shows?</h5>
+                <div class="text-muted mt-2">We source subtitles from various websites, ensuring we have a wide selection available for almost every title. </div>
+              </div>
+              <div class="rounded p-3">
+                <h5 class="mt-auto">How do I utilize your API?</h5>
+                <div class="text-muted mt-2">Using our API requires basic programming knowledge. However, if you require any assistance, feel free to contact our support team. </div>
+              </div>
+              <div class="rounded p-3">
+                <h5 class="mt-auto">What should I do if I come across incorrect movies or TV shows?</h5>
+                <div class="text-muted mt-2">If you notice any inaccuracies with a movie or TV show, please utilize the report button on the player. Our team will promptly address and rectify the issue. </div>
+              </div>
+              <div class="rounded p-3">
+                <h5 class="mt-auto">Is it possible to change the video quality?</h5>
+                <div class="text-muted mt-2">Yes! The player has a range of quality options.</div>
+              </div>
+              <div class="rounded p-3">
+                <h5 class="mt-auto">Do you offer movies and TV shows in languages other than English?</h5>
+                <div class="text-muted mt-2">While our server primarily caters to English-speaking audiences, we do host a vast collection of global movies in their original language. However, most of our videos have subtitles included.</div>
+              </div>
+              <div class="rounded p-3">
+                <h5 class="mt-auto">Can i use this API for anime?</h5>
+                <div class="text-muted mt-2">Currently we do not support anime, we may do that in the future.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="py-5">
+        <div class="container">
+          <div class="d-flex mb-3">
+            <span>© 2023 VidSrc. All rights reserved.</span>
+            <a class="ml-auto" data-toggle="modal" data-target="#contact" href="#">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal fade" id="contact">
+      <div class="modal-dialog limit-w modal-dialog-centered">
+        <div class="modal-content bg p-4">
+          <div class="modal-close" data-dismiss="modal">
+            <i class="bi bi-x"></i>
+          </div>
+          <h4 class="major-color">Contact us</h4>
+          <p class="text-muted">Tell us a bit about yourself, and we’ll tell you a lot more about us.</p>
+          <form class="ajax" method="post" action="contact-submit">
+            <div class="form-group mt-2">
+              <input type="email" class="form-control form-control-lg" placeholder="Your Email" name="email">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control form-control-lg" placeholder="Subject" name="subject">
+            </div>
+            <div class="form-group">
+              <textarea rows="5" type="text" class="form-control form-control-lg" placeholder="Leave us a message" name="message"></textarea>
+            </div>
+            <div class="form-group">
+              <span class="captcha"></span>
+            </div>
+            <button type="submit" class="submit btn btn-lg btn-primary">Send <i class="bi bi-send-fill"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script type="text/javascript" src="assets/js/all.js"></script>
+  </body>
+</html>
